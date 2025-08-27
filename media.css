@@ -1,0 +1,176 @@
+/* ----------- Mobile (0px - 600px) ----------- */
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;  /* smaller base font */
+    }
+    body{
+        min-width: 100%;
+    }
+    .header {
+        padding: 1rem 5%;
+    }
+    #manu-icon {
+        display: block;   /* show menu icon */
+    }
+    .navbar {
+        display: none;    /* hide navbar by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: darkgray;
+        padding: 1rem 0;
+    }
+    .navbar a {
+        display: block; 
+        margin: 1rem 0;
+        text-align: center;
+    }
+    .home {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 480px;
+        margin-bottom: -100px;
+        padding: 4rem 5%;
+    }
+    .nova{
+        margin-top: -500px;
+        margin-left: -300px;
+    }
+    .About {
+        flex-direction: column;
+        padding: 4rem 5%;
+    }
+    .About-image img{
+        width: 300px;
+        height: 300px;
+    }
+    .ski {
+        flex-direction: column;
+        align-items: center;
+    }
+    .ski > div {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .heading{
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading > div {
+        width: 90%;
+        left: 0;
+        margin: 20px auto;
+    }
+    .heading img{
+        position: relative;
+        left: -50px;
+    }
+    .heading .use{
+        display: flex;
+        margin-left: 50px;
+    }
+    .footer{
+        height: 150px;
+    }
+    .fot{
+        position: relative;
+        left: -260px;
+        top: -30px;
+    }
+    .footer h1{
+        margin-top: 43px;
+        position: relative;
+        left: 60px;
+    }
+    .icon{
+        position: relative;
+        top: -90px;
+        left: 60px;
+    }
+    .footer-icontop{
+        position: relative;
+        top: -70px;
+        left: 20px;
+    }
+}
+
+/* ----------- Tablet (601px - 1024px) ----------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+    html {
+        font-size: 56%;
+    }
+    .header {
+        padding: 1.5rem 7%;
+    }
+    .home {
+        flex-direction: row;
+        padding: 6rem 7%;
+    }
+    .About {
+        flex-direction: row;
+        padding: 6rem 7%;
+    }
+    .ski {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ski > div {
+        width: 45%;
+        margin: 15px;
+    }
+    .heading > div {
+        width: 45%;
+        margin: 15px;
+        left: 0;
+    }
+}
+
+/* ----------- Laptop / Desktop (1025px+) ----------- */
+@media (min-width: 1025px) {
+    html {
+        font-size: 62.5%; /* keep your default */
+    }
+    .header {
+        padding: 2rem 9%;
+    }
+    .home {
+        flex-direction: row;
+    }
+    .About {
+        flex-direction: row;
+    }
+    .ski {
+        flex-direction: row;
+    }
+}
+/*            break point            */
+/* Hide navbar by default on mobile */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: darkgray;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    .navbar.active {
+        display: flex; /* Show when active */
+        animation: slideDown 0.3s ease-in-out;
+    }
+    #manu-icon {
+        display: block; /* Show hamburger icon */
+        cursor: pointer;
+    }
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
