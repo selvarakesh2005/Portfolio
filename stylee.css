@@ -212,7 +212,7 @@ section{
     justify-content:center;
     align-items: center;
     gap: 2rem;
-
+    margin-top: -300px;
 }
 h2{
     font-size: 3rem;
@@ -442,3 +442,4 @@ a.btn:hover{
 }
 
 /* break boint */
+
